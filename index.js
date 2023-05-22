@@ -3,9 +3,13 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import { exec } from 'child_process';
 import fsExtra from 'fs-extra';
-import path from 'path';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
-const templatePath = path.join(path.resolve(), 'TEMPL');
+const templateFolder = 'TEMPL';
+const currentUrl = import.meta.url;
+const currentPath = dirname(fileURLToPath(currentUrl));
+const templatePath = join(currentPath, templateFolder);
 
 console.log(chalk.bold.yellow('Welcome to Create React Legacy.'));
 
