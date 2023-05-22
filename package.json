@@ -1,6 +1,6 @@
 {
   "name": "react-legecy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": {
     "create-react-legecy": "index.js"
   },
